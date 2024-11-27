@@ -1,4 +1,11 @@
 def sstf(requests, start):
+    """
+    SSTF Implementation
+    
+    requests: Lista de solicitudes de cilindros.
+    start: Posición inicial del cabezal del disco.
+    return: Orden de procesamiento y tiempo total de búsqueda.
+    """
     current_position = start
     total_seek_time = 0
     order = []
