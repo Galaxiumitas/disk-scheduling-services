@@ -6,6 +6,12 @@ app = Flask(__name__)
 CORS(app)
 
 from fcfs import fcfs
+from sstf import sstf
+from scan import scan
+from cscan import cscan
+from look import look
+from clook import clook
+
 
 @app.route("/", methods=['GET'])
 def hello():
@@ -46,6 +52,16 @@ def sched():
   
   if algorithm == 1:  ## FCFS
     result = fcfs(arm, requests)
+  elif algorithm == 2:  ## SSTF
+    result = sstf(arm, requests)
+  elif algorithm == 2:  ## SCAN
+    result = scan(arm, requests)
+  elif algorithm == 2:  ## C-SCAN
+    result = cscan(arm, requests)
+  elif algorithm == 2:  ## LOOK
+    result = look(arm, requests)
+  elif algorithm == 2:  ## C-LOOK
+    result = clook(arm, requests)
   else:
     return jsonify({"error": "Invalid algorithm"}), 400
   
