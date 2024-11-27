@@ -1,4 +1,4 @@
-def c_scan(requests, start, disk_size):
+def cscan(requests, start, disk_size):
     """
     C-SCAN Implementation
 
