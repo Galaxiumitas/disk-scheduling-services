@@ -2,12 +2,10 @@ def scan(requests, start, direction, disk_size):
     """
     SCAN Implementation
     
-    Parametros:
     requests: Lista de solicitudes de cilindros.
     start: Posición inicial del cabezal del disco.
     direction: Dirección inicial del movimiento .
     disk_size: Tamaño del disco.
-    
     return: Orden de procesamiento y tiempo total de búsqueda.
     """
     requests.sort()
